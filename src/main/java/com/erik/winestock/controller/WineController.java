@@ -24,7 +24,7 @@ public class WineController implements WineControllerDocs {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public WineDTO createBeer(@RequestBody @Valid WineDTO wineDTO) throws WineAlreadyRegisteredException {
+    public WineDTO createWine(@RequestBody @Valid WineDTO wineDTO) throws WineAlreadyRegisteredException {
         return wineService.createWine(wineDTO);
     }
 
@@ -34,7 +34,7 @@ public class WineController implements WineControllerDocs {
     }
 
     @GetMapping
-    public List<WineDTO> listBeers() {
+    public List<WineDTO> listWines() {
         return wineService.listAll();
     }
 

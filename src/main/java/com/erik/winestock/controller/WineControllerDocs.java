@@ -19,7 +19,7 @@ public interface WineControllerDocs {
             @ApiResponse(code = 201, message = "Success wine creation"),
             @ApiResponse(code = 400, message = "Missing required fields or wrong field range value.")
     })
-    WineDTO createBeer(WineDTO wineDTO) throws WineAlreadyRegisteredException;
+    WineDTO createWine(WineDTO wineDTO) throws WineAlreadyRegisteredException;
 
     @ApiOperation(value = "Returns wine found by a given name")
     @ApiResponses(value = {
@@ -32,7 +32,7 @@ public interface WineControllerDocs {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "List of all wines registered in the system"),
     })
-    List<WineDTO> listBeers();
+    List<WineDTO> listWines();
 
     @ApiOperation(value = "Delete a wine found by a given valid Id")
     @ApiResponses(value = {
